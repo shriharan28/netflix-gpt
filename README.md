@@ -1,11 +1,11 @@
 # Features
 
-# Login/SignUp Page
+- Login/SignUp Page
 
--Sign In / Sign up form
--redirect to Browse Page
+  -Sign In / Sign up form
+  -redirect to Browse Page
 
-# Browse Page (after authentication)
+- Browse Page (after authentication)
 
 -Header
 -Main Movie
@@ -14,7 +14,7 @@
 -MovieSuggestions
 -MovieList \* N
 
-# NetflixGPT
+- NetflixGPT
 
 -Search Bar
 -Movie Suggestions
