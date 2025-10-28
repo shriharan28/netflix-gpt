@@ -6,10 +6,10 @@ const VideoBackground = ({ movieId }) => {
   useMoviesTrailer(movieId);
 
   return (
-    <div className="w-screen aspect-video overflow-hidden relative">
-      <div className="absolute top-[-5%] scale-[1.5] w-full h-full">
+    <div className="w-full h-[100vh] overflow-hidden relative">
+      <div className=" absolute top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 scale-[1.3]">
         <iframe
-          className="w-full h-full"
+          className=" w-full h-full"
           src={
             "https://www.youtube.com/embed/" +
             trailerVideo?.key +

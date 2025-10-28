@@ -30,6 +30,7 @@
 - Update Store with Trailer Video data
 - Embedded the Youtube video and make it autoplay and mute
 - Tailwind classes to make Main Container look awesome youtube video crop to hide watermarks
+- Build Secondary Contaiter with Movie List
 
 # Features
 
