@@ -1,31 +1,53 @@
-import { signOut } from "firebase/auth";
-import React from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import React, { useEffect } from "react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser, removeUser } from "../utils/userSlice";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(
+          addUser({
+            uid: uid,
+            email: email,
+            displayName: displayName,
+            photoURL: photoURL,
+          })
+        );
+        navigate("/browse");
+      } else {
+        navigate("/");
+        dispatch(removeUser());
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful
-        navigate("/");
       })
       .catch((error) => {
         // An error happened.
       });
   };
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-20 flex justify-between">
-      <img
-        className="w-44"
-        src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-08-26/consent/87b6a5c0-0104-4e96-a291-092c11350111/0198e689-25fa-7d64-bb49-0f7e75f898d2/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
-        alt=""
-      />
+    <div className=" absolute w-screen px-8 py-2 bg-gradient-to-b from-black/75  z-20 flex justify-between">
+      <div className="origin-left scale-[0.8]">
+        <img className="w-44" src={LOGO} alt="nfLOGO" />
+      </div>
       {user && (
-        <div className="flex my-3">
+        <div className="flex my-3 origin-right scale-[0.8]">
           <img
             className="w-12 h-12 rounded-lg "
             alt="userlogo"
@@ -34,7 +56,7 @@ const Header = () => {
           <p className="font-bold text-white p-3">{user.displayName}</p>
           <button
             onClick={handleSignOut}
-            className="bg-black font-semibold rounded-lg mx-4 px-5 h-[48px] text-white"
+            className="bg-white font-bold rounded-lg mx-4 px-5 h-[48px] text-black"
           >
             Sign Out
           </button>
