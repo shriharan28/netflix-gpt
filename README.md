@@ -31,6 +31,9 @@
 - Embedded the Youtube video and make it autoplay and mute
 - Tailwind classes to make Main Container look awesome youtube video crop to hide watermarks
 - Build Secondary Contaiter with Movie List
+- GPT Searh Page
+- GPT Search Bar
+- (BONUS) Multi Language Feature
 
 # Features
 

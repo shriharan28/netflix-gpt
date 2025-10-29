@@ -13,3 +13,12 @@ export const API_OPTIONS = {
   },
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/original/";
+
+export const BG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/9ba9f0e2-b246-47f4-bd1f-3e84c23a5db8/web/IN-en-20251020-TRIFECTA-perspective_d6da84e9-6145-4b1e-bb51-e402c966a045_large.jpg";
+export const SUPPORTED_LANGUAGES = [
+  { identifiers: "en", name: "English" },
+  { identifiers: "tamil", name: "Tamil" },
+  { identifiers: "spanish", name: "Spanish" },
+  { identifiers: "japanese", name: "Japanese" },
+];

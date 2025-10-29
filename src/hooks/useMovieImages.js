@@ -11,11 +11,10 @@ const useMovieImages = (movieId) => {
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json);
 
     const filterData = json.logos.filter((logo) => logo.iso_639_1 === "en");
     const logo = filterData[0];
-    console.log(filterData);
+
     dispatch(addMovieLogo(logo));
   };
 
