@@ -34,6 +34,9 @@
 - GPT Searh Page
 - GPT Search Bar
 - (BONUS) Multi Language Feature
+- openai API integration and prompting
+- built GptSuggestions component reUsed MovieList Component in it to display movie cards
+- Memoization for repeated api calls using redux store
 
 # Features
 

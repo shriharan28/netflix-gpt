@@ -9,7 +9,7 @@ const VideoTitle = ({ title, overview, movieId }) => {
   if (!logo) return;
 
   return (
-    <div className=" pt-[18%] px-14 absolute h-[100vh] text-white bg-gradient-to-r from-black w-full aspect-video z-10  ">
+    <div className=" pt-[15%] px-14 absolute h-[100vh] text-white bg-gradient-to-r from-black w-full aspect-video z-10  ">
       <img
         className="w-1/4  py-1 origin-left "
         src={IMG_CDN_URL + logo.file_path}

@@ -9,6 +9,7 @@ import useTopRatedSeries from "../hooks/useTopRatedSeries";
 import useOnTheAirSeries from "../hooks/useOnTheAirSeries";
 import GptSearch from "./GptSearch";
 import { useSelector } from "react-redux";
+import Footer from "./Footer";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
@@ -20,17 +21,22 @@ const Browse = () => {
   useOnTheAirSeries();
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen ">
       <Header />
-      {showGptSearch ? (
-        <GptSearch />
-      ) : (
-        <>
-          {" "}
-          <MainContainer />
-          <SecondaryContainer />
-        </>
-      )}
+      <div className="flex-grow flex flex-col ">
+        {showGptSearch ? (
+          <GptSearch />
+        ) : (
+          <>
+            {" "}
+            <MainContainer />
+            <SecondaryContainer />
+          </>
+        )}
+      </div>
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 };
