@@ -88,11 +88,11 @@ const Login = () => {
   return (
     <div className=" relative  min-h-screen bg-black overflow-x-hidden">
       <img
-        className="absolute h-full inset-0 object-cover w-screen opacity-30 bg-black"
+        className="absolute h-full inset-0 object-cover w-screen opacity-30 md:opacity-100 bg-black"
         src={BG_URL}
         alt="backdrop"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40 md:bg-transparent"></div>
       <div className="relative z-20">
         <Header />
       </div>
