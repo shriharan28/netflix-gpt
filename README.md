@@ -37,6 +37,7 @@
 - openai API integration and prompting
 - built GptSuggestions component reUsed MovieList Component in it to display movie cards
 - Memoization for repeated api calls using redux store
+- made the app responsive to mobile
 
 # Features
 

@@ -6,8 +6,12 @@ import { BG_URL } from "../utils/constants";
 const GptSearch = () => {
   return (
     <div>
-      <div className=" bg-black fixed -z-20">
-        <img className="opacity-35" src={BG_URL} alt="logo" />
+      <div className=" bg-black fixed  -z-20">
+        <img
+          className="opacity-35 h-screen w-screen object-cover md:h-auto"
+          src={BG_URL}
+          alt="logo"
+        />
       </div>
       <GptSearchBar />
       <GptSuggestions />

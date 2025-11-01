@@ -9,15 +9,15 @@ const VideoTitle = ({ title, overview, movieId }) => {
   if (!logo) return;
 
   return (
-    <div className=" pt-[15%] px-14 absolute h-[100vh] text-white bg-gradient-to-r from-black w-full aspect-video z-10  ">
+    <div className=" pt-[30%] pl-7 md:pt-[15%] md:px-14 absolute h-[100vh] text-white bg-gradient-to-r from-black w-full aspect-video z-10  ">
       <img
-        className="w-1/4  py-1 origin-left "
+        className="w-1/3 md:w-1/4 py-1 origin-left "
         src={IMG_CDN_URL + logo.file_path}
         alt="title_logo"
       />
       {/*<h1 className="font-bold text-2xl">{title}</h1>*/}
-      <p className="py-4 text-2xs w-5/12 ">{overview}</p>
-      <div className="">
+      <p className="py-4 text-2xs w-5/12 hidden md:block">{overview}</p>
+      <div className="md:scale-[1.0] origin-left scale-[0.6]">
         <button className=" rounded-lg hover:bg-opacity-85 bg-white text-black p-3 px-10 text-lg font-semibold ">
           <label className="font-serif pr-3"> ▶</label>Play
         </button>

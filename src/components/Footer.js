@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="  bg-black  font-mono z-30  ">
-      <div className="pt-5 ">
+    <div className="  bg-black  font-mono z-50  ">
+      <div className="pt-5  md:mt-0 pb-5 md:pb-0 -mt-1">
         <img
-          className="absolute  ml-14  pt-2"
+          className="absolute  md:ml-14 ml-2  pt-2 md:scale-[1.0] hidden md:block "
           src="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico"
           alt=""
         />
 
-        <div className=" flex gap-5 justify-center relative text-gray-600 pb-2">
+        <div className=" flex flex-wrap gap-5 justify-center relative text-gray-600 pb-2 md:scale-[1.0] scale-[0.8]">
           <Link to="https://github.com/shriharan28/netflix-gpt">
             <img
               className="w-5  mr-1 mt-1"
@@ -34,15 +34,17 @@ const Footer = () => {
             />
           </Link>
         </div>
-
-        <p className=" text-sm flex justify-center  font-mono   text-gray-600">
-          <label className=" text-gray-100 pr-1 "> </label> Built with React.js
-          and Tailwind CSS by shriharanstalin{" "}
-        </p>
-        <p className=" text-sm flex justify-center pb-[1.5%] font-light  text-gray-600 ">
-          <label className=" text-gray-100 pr-1 "> </label> Inspired by Akshay
-          Saini{" "}
-        </p>
+        <div className="origin-top text-center md:scale-[1.0] md:text-sm text-[9px] text-gray-600">
+          <p className="  flex justify-center     ">
+            <span className="whitespace-nowrap">
+              {" "}
+              Built with React.js and Tailwind CSS by shriharanstalin
+            </span>{" "}
+          </p>
+          <p className=" flex justify-center   md:pb-[1.5%] font-light ">
+            Inspired by Akshay Saini{" "}
+          </p>
+        </div>
       </div>
     </div>
   );
