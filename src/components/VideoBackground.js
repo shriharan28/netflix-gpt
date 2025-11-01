@@ -6,7 +6,7 @@ const VideoBackground = ({ movieId }) => {
   useMoviesTrailer(movieId);
 
   return (
-    <div className="w-full md:h-[100vh] md:pt-0 pt-[90%]  overflow-hidden relative">
+    <div className="w-full md:h-[100vh] md:pt-0 pt-[85%]  overflow-hidden relative">
       <div className=" absolute top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 scale-[1.3]">
         <iframe
           className=" w-full h-full"
